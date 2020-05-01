@@ -7,6 +7,7 @@
 	<name>nvnshoppingcart</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+	
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -138,6 +139,18 @@
 	</dependency>
 	
 	</dependencies>
+    <distributionManagement>
+        <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://localhost:8081/repository/shoppingcart-rel/</url>
+		</repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://localhost:8081/repository/shoppingcart-snap/</url>
+        </snapshotRepository>
+    </distributionManagement>
 	<build>
 		<finalName>nvnshoppingcart</finalName>
 	</build>
